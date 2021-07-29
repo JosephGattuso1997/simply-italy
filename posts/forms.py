@@ -1,6 +1,6 @@
 from django import forms
 from tinymce import TinyMCE
-from .models import Post, Comment
+from .models import Post, Comment, Signup
 
 
 class TinyMCEWidget(TinyMCE):
@@ -31,3 +31,15 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('content', )
+
+class EmailSignupForm(forms.ModelForm):
+    email = forms.EmailField(widget=forms.TextInput(attrs={
+        "type": "email",
+        "name": "email",
+        "id": "email",
+        "placeholder": "Type your email address",
+    }), label="")
+
+    class Meta:
+        model = Signup
+        fields = ('email', )

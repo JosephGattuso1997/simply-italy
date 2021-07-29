@@ -4,10 +4,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import View, ListView, DetailView
 
-from .forms import CommentForm, PostForm
-from .models import Post, Author, PostView
-from marketing.forms import EmailSignupForm
-from marketing.models import Signup
+from .forms import CommentForm, PostForm, EmailSignupForm
+from .models import Post, Author, PostView, Signup
+
 
 form = EmailSignupForm()
 

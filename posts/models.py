@@ -95,3 +95,11 @@ class Post(models.Model):
     @property
     def view_count(self):
         return PostView.objects.filter(post=self).count()
+
+
+class Signup(models.Model):
+    email = models.EmailField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
