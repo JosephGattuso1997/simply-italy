@@ -25,6 +25,7 @@ pytz
 requests
 requests-oauthlib
 six
+smartfields
 sqlparse
 typed-ast
 urllib3
