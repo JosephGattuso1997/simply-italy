@@ -14,7 +14,6 @@ from posts.views import (
     PostListView,
     PostDetailView,
 )
-from marketing.views import email_list_signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,7 +24,6 @@ urlpatterns = [
     path('search/', search, name='search'),
     path('about/', about, name='about'),
     path('gallary/', gallary, name='gallary'),
-    path('email-signup/', email_list_signup, name='email-list-signup'),
     # path('post/<id>/', post_detail, name='post-detail'),
     path('post/<pk>/', PostDetailView.as_view(), name='post-detail'),
     # path('post/<id>/update/', post_update, name='post-update'),
