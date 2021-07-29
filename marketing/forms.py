@@ -1,5 +1,5 @@
 from django import forms
-from models import Signup
+from .models import Signup
 
 
 class EmailSignupForm(forms.ModelForm):
