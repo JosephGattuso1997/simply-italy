@@ -4,6 +4,7 @@ certifi
 chardet
 defusedxml
 Django
+django_heroku
 django-allauth
 django-crispy-forms
 django-tinymce4-lite
