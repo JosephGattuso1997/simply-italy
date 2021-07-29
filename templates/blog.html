@@ -1,0 +1,68 @@
+
+{% extends 'blogbase.html' %}
+{% load static %}
+
+{% block content %}
+  
+
+    <section id="blog_intro" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2>Latest<br class="visible-lg visible-md visable-sm"> From<br class="visible-lg visible-md visable-sm"> The<br class="visible-lg visible-md visable-sm"> Blog</h2>     
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
+                	<div class="content">
+	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
+					</div>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- BLOG - POSTS -->        
+    <section id="blog_posts" >
+    	<!-- BLOG - POST 1 -->
+        {% for post in queryset %}
+	    <div class="post_excerpt">
+	        <div class="container">
+	         	<div class="row">
+	         		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+	         			<img src="{{ post.thumbnail.url }}" alt="" class="img-responsive">
+	         		</div>
+				</div> 	
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
+						<h3>{{ post.title }}</h3>   
+						<p>{{ post.author }}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; {{ post.timestamp|timesince }} ago</p>
+						<p>{{ post.overview|linebreaks|truncatechars:200 }}</p>
+						<a href="{{ post.get_absolute_url }}" class="cta_dark">read more</a>  
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        {% endfor %}
+        <!-- BLOG - LOAD MORE POSTS -->
+		<div class="more_posts">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+	                	<div class="posts_pagination">
+                        {% if page_obj.has_previous %}
+                        <a href="?{{ page_request_var }}={{ queryset.previous_page_number }}" class="button pagination_button"><div class="pagination_button_text">{{ page_obj.previous_page_number }}</div></a>
+                         {% endif %}
+						<a href="?{{ page_request_var }}={{ page_obj.number }}" class="button pagination_button current"><div class="pagination_button_text">{{ page_obj.number }}</div></a>
+						{% if page_obj.has_next %}
+                        <a href="?{{ page_request_var }}={{ page_obj.next_page_number }}" class="button pagination_button"><div class="pagination_button_text">{{ page_obj.next_page_number }}</div></a>
+                         {% endif %}
+
+						</div>
+	                </div>
+	            </div>
+	        </div>
+        </div>  
+    </section>
+
+
+{% endblock content %}

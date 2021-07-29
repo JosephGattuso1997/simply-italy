@@ -1,0 +1,84 @@
+{% extends 'blogbase.html' %}
+{% load static %}
+
+{% block content %}
+  
+   
+       
+    <!-- BLOG - POSTS -->        
+    <section id="blog_posts" >
+    	<!-- BLOG - POST 1 -->
+	    <div class="post_excerpt">
+	        <div class="container">
+	         	<div class="row">
+	         		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+	         			<img src="{{ post.thumbnail.url }}" alt="" class="img-responsive">
+	         		</div>
+				</div> 	
+	        
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
+						<h3>{{ post.title }}</h3>   
+						<p>{{ post.author.user.username }}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{% for cat in post.categories.all %}<a href="#">{{ cat }}</a>{% endfor %}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{{ post.timestamp|timesince }} ago</p>
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                        {{ post.content | safe }}
+	                </div>
+	            </div>
+	        </div>
+        </div>
+    </section>
+    
+    <section id="comments">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<h3>{{ post.comments.count }} Comments:</h3>
+                {% for comment in post.get_comments %}
+    				<div class="comment">
+                     {% if comment.user.author %}
+	    				<div class="avatar"><img src="{{ comment.user.author.profile_picture.url }}" class="img-responsive" alt=""></div>
+                        {% else %}
+                          <img src="{% static 'images/members/member1.jpg' %}" alt="..." class="img-fluid rounded-circle">
+                          {% endif %}
+	    				<div class="comment_box">
+	    					<div class="comment_details"><p>{{ comment.user.username }}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{{ comment.timestamp|timesince }} ago</p></div>
+	    					<p>{{ comment.content }}</p>
+						</div>
+    				</div>
+    				 {% endfor %}
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    
+        
+    <!-- Comment form-->       
+    <section id="comment_form">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_big" >
+	                <div class="contact_content col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+						<h3>Leave your comment:</h3>
+						<!-- CONTACT FORM -->
+						<div id="contact_form">
+							<form  method="POST" action="." id="contact-form">
+							{% csrf_token %}
+		                        <div class="input">
+		                        <h5>Your Comment:</h5>
+		                        {{ form.content }}
+		                        </div>
+		                        
+		                        <button id="btn-send" class="cta_light" type="submit">Submit</button>
+		                    </form>
+	                    </div>    
+	                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ {% endblock content %}

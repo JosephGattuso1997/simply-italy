@@ -1,0 +1,75 @@
+    {% load static %}
+    <!-- FOOTER -->    
+    <section id="footer" data-stellar-background-ratio="0.5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 footer_content" >
+					<h4>Copyright © 2021 Simply Italy Travel Agency</h4>   
+					<div class="social_icons">
+	                <ul>
+	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
+	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
+	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
+	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+	                </ul>
+					</div>  
+					
+                </div>	
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 footer_arrow_container" >
+					<a href="" class="button arrow_up arrow_up_v1"><div data-icon="&#xe106;" class="button_icon arrow_up_icon"></div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+   
+	<!-- JavaScript plugins comes here -->	
+    <script src=" {% static 'js/jquery-2.0.3.min.js' %} "></script>        <!-- jQuery -->
+    <script src=" {% static 'js/jquery.easing.min.js' %} "></script>       <!-- jQuery easing-->    
+    <script src=" {% static 'js/jquery.scrollTo.js' %} "></script>         <!-- scroll to-->
+    <script src=" {% static 'js/jquery.form.js' %} "></script>             <!-- form -->
+    <script src=" {% static 'js/main.js' %} "></script>                    <!-- main js file -->
+    <script src=" {% static 'js/retina.js' %} "></script>                  <!-- retina images -->
+    <script src=" {% static 'js/waypoints.min.js' %} "></script>           <!-- waypoints script -->
+    <script src=" {% static 'js/waypoints-sticky.min.js' %} "></script>    <!-- waypoints sticky navigation -->
+    <script src=" {% static 'js/owl.carousel.min.js' %} "></script>        <!-- owl carousel - portfolio section -->
+    <script src=" {% static 'js/nivo-lightbox.min.js' %} "></script>       <!-- nivo lightbox -->
+    <script src=" {% static 'js/jquery.nivo.slider.js' %} "></script>      <!-- nivo slider -->
+    <script src=" {% static 'js/classie.js' %} "></script>                 <!-- class helper function -->
+    <script src=" {% static 'js/jquery.counterup.min.js' %} "></script>    <!-- counter -->
+    <script src=" {% static 'js/jquery.fitvids.js' %} "></script>          <!-- responsive videos -->
+    <script src=" {% static 'js/jquery.stellar.js' %} "></script>          <!-- parallax backgrounds -->
+	<script src=" {% static 'js/modalEffects.js' %} "></script>            <!-- modal windows -->
+	<script src=" {% static 'js/cbpFWTabs.js' %} "></script>               <!-- tabs -->
+	<script src=" {% static 'js/vallenato.js' %} "></script>               <!-- accordion -->
+	<script src=" {% static 'js/dots.js' %} "></script>                    <!-- dots - pagination -->
+        
+    
+    <!-- MOBILE NAVIGATION -->    
+    <script>
+        var showRight = document.getElementById( 'showRight' ),
+        hideRight = document.getElementById( 'hideRight' ),
+        menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        body = document.body;
+        
+        showRight.onclick = function(event) {
+       		"use strict";
+       		event.preventDefault();
+            classie.toggle( this, 'active' );
+            classie.toggle( menuRight, 'cbp-spmenu-open' );
+            disableOther( 'showRight' );
+            return false;
+        };
+    
+        hideRight.onclick = function() {
+        	"use strict";
+        	event.preventDefault();
+            classie.toggle( this, 'active' );
+            classie.toggle( menuRight, 'cbp-spmenu-open' );
+            disableOther( 'showRight' );
+            return false;
+        };
+    </script>
+    

@@ -1,0 +1,82 @@
+   {% load static %}
+	<!-- JavaScript plugins comes here -->	
+    <script src=" {% static 'js/jquery-2.0.3.min.js' %} "></script>        <!-- jQuery -->
+    <script src=" {% static 'js/jquery.easing.min.js' %} "></script>       <!-- jQuery easing-->    
+    <script src=" {% static 'js/jquery.scrollTo.js' %} "></script>         <!-- scroll to-->
+    <script src=" {% static 'js/jquery.form.js' %} "></script>             <!-- form -->
+    <script src=" {% static 'js/main.js' %} "></script>                    <!-- main js file -->
+    <script src=" {% static 'js/retina.js' %} "></script>                  <!-- retina images -->
+    <script src=" {% static 'js/waypoints.min.js' %} "></script>           <!-- waypoints script -->
+    <script src=" {% static 'js/waypoints-sticky.min.js' %} "></script>    <!-- waypoints sticky navigation -->
+    <script src=" {% static 'js/owl.carousel.min.js' %} "></script>        <!-- owl carousel - portfolio section -->
+    <script src=" {% static 'js/nivo-lightbox.min.js' %} "></script>       <!-- nivo lightbox -->
+    <script src=" {% static 'js/jquery.nivo.slider.js' %} "></script>      <!-- nivo slider -->
+    <script src=" {% static 'js/classie.js' %} "></script>                 <!-- class helper function -->
+    <script src=" {% static 'js/jquery.counterup.min.js' %} "></script>    <!-- counter -->
+    <script src=" {% static 'js/jquery.fitvids.js' %} "></script>          <!-- responsive videos -->
+    <script src=" {% static 'js/jquery.stellar.js' %} "></script>          <!-- parallax backgrounds -->
+	<script src=" {% static 'js/modalEffects.js' %} "></script>            <!-- modal windows -->
+	<script src=" {% static 'js/cbpFWTabs.js' %} "></script>               <!-- tabs -->
+	<script src=" {% static 'js/vallenato.js' %} "></script>               <!-- accordion -->
+	<script src=" {% static 'js/dots.js' %} "></script>                    <!-- dots - pagination -->
+	<script src=" {% static 'js/jquery.backstretch.js' %} "></script>      <!-- image slider for homepage -->
+
+
+	<!-- OWL CAROUSEL - PORTFOLIO -->	
+    <script>
+		$( document ).ready(function()  {
+			var owl = $('#owl-gallery');
+	        owl.owlCarousel({
+	            items : 5,
+	            itemsDesktop : [1199,3],
+	            itemsDesktopSmall : [980,3],
+	            itemsTablet: [768,3],
+	            itemsTabletSmall: [550,2],
+	            itemsMobile : [480,2],
+	            pagination:false,
+	        });
+	        $('.next').click(function(){owl.trigger('owl.next');return false; })
+			$('.prev').click(function(){owl.trigger('owl.prev');return false; })
+        });
+    </script>
+    
+    
+    <!-- MOBILE NAVIGATION -->
+    <script>
+        var showRight = document.getElementById( 'showRight' ),
+        hideRight = document.getElementById( 'hideRight' ),
+        menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        body = document.body;
+        
+        showRight.onclick = function(event) {
+       		"use strict";
+       		event.preventDefault();
+            classie.toggle( this, 'active' );
+            classie.toggle( menuRight, 'cbp-spmenu-open' );
+            disableOther( 'showRight' );
+            return false;
+        };
+    
+        hideRight.onclick = function(event) {
+        	"use strict";
+        	event.preventDefault();
+            classie.toggle( this, 'active' );
+            classie.toggle( menuRight, 'cbp-spmenu-open' );
+            disableOther( 'showRight' );
+            return false;
+        };
+    </script>
+    
+    
+    <!-- HOMEPAGE SLIDESHOW -->
+    <script>	
+    	$('.homepage-slideshow #home').backstretch([
+			" {% static 'images/venice-italy-2021-04-02-19-38-05-utc.jpg' %} ",
+	      	" {% static 'images/italian-anterselva-lake-from-stalle-pass-italy-2021-04-03-14-35-55-utc.jpg' %} ",
+	      	" {% static 'images/colosseum-in-rome-VMS5NPJ.jpg' %} "
+	      	], {
+        fade: 750,
+        duration: 4000
+		});
+    </script>
+

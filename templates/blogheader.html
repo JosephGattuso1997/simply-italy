@@ -1,0 +1,106 @@
+  {% load static %}
+  
+  <head>
+    <title>Alexa - HTML5/CSS3 Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    <!--
+	 /$$   /$$ /$$$$$$       /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$  /$$$$$$$$ /$$                 
+	| $$  | $$|_  $$_/      |__  $$__/| $$  | $$| $$_____/| $$__  $$| $$_____/| $$                 
+	| $$  | $$  | $$           | $$   | $$  | $$| $$      | $$  \ $$| $$      | $$                 
+	| $$$$$$$$  | $$           | $$   | $$$$$$$$| $$$$$   | $$$$$$$/| $$$$$   | $$                 
+	| $$__  $$  | $$           | $$   | $$__  $$| $$__/   | $$__  $$| $$__/   |__/                 
+	| $$  | $$  | $$           | $$   | $$  | $$| $$      | $$  \ $$| $$                           
+	| $$  | $$ /$$$$$$         | $$   | $$  | $$| $$$$$$$$| $$  | $$| $$$$$$$$ /$$                 
+	|__/  |__/|______/         |__/   |__/  |__/|________/|__/  |__/|________/|__/                 
+	  /$$$$$$  /$$      /$$  /$$$$$$  /$$$$$$$  /$$$$$$$$        /$$$$$$  /$$   /$$ /$$     /$$ /$$
+	 /$$__  $$| $$$    /$$$ /$$__  $$| $$__  $$|__  $$__/       /$$__  $$| $$  | $$|  $$   /$$/| $$
+	| $$  \__/| $$$$  /$$$$| $$  \ $$| $$  \ $$   | $$         | $$  \__/| $$  | $$ \  $$ /$$/ | $$
+	|  $$$$$$ | $$ $$/$$ $$| $$$$$$$$| $$$$$$$/   | $$         | $$ /$$$$| $$  | $$  \  $$$$/  | $$
+	 \____  $$| $$  $$$| $$| $$__  $$| $$__  $$   | $$         | $$|_  $$| $$  | $$   \  $$/   |__/
+	 /$$  \ $$| $$\  $ | $$| $$  | $$| $$  \ $$   | $$         | $$  \ $$| $$  | $$    | $$        
+	|  $$$$$$/| $$ \/  | $$| $$  | $$| $$  | $$   | $$         |  $$$$$$/|  $$$$$$/    | $$     /$$
+	 \______/ |__/     |__/|__/  |__/|__/  |__/   |__/          \______/  \______/     |__/    |__/
+    
+    THIS IS ALEXA - HTML5/CSS3 TEMPLATE MADE BY MAT PRZEGIETKA
+    Check out this clean code :)
+    -->
+    
+    
+    <!-- CSS Files comes here -->
+    <link href=" {% static 'css/bootstrap.css' %} " rel="stylesheet" media="screen">                              <!-- Bootstrap styles -->
+    <link href=" {% static 'css/style.css' %} " rel="stylesheet" media="screen">                                  <!-- Main CSS file -->
+    <link href=" {% static 'css/rapid-icons.css' %} " rel="stylesheet" media="screen">                            <!-- Custom icons CSS file -->
+    <link href=" {% static 'css/animate.css' %} " rel="stylesheet" media="screen">                                <!-- CSS animations -->
+    <link href=" {% static 'css/custom_animations.css' %} " rel="stylesheet" media="screen">                      <!-- Custom CSS animations -->
+    <link href=" {% static 'css/owl.carousel.css' %} " rel="stylesheet" media="screen">                           <!-- Owl Carousel Styles - Portfolio Section -->
+    <link href=" {% static 'css/owl.theme.css' %} " rel="stylesheet" media="screen">                              <!-- Owl Carousel Styles - Portfolio Section -->
+    <link href=" {% static 'css/nivo-lightbox.css' %} " rel="stylesheet" media="screen">                          <!-- Lightbox Styles -->
+    <link href=" {% static 'css/nivo_lightbox_themes/default/default.css' %} " rel="stylesheet" media="screen">   <!-- Lightbox Styles -->
+    <link href=" {% static 'css/nivo-slider.css' %} " rel="stylesheet" media="screen">                            <!-- Slider Styles -->
+    <link href=" {% static 'css/nivo_slider_themes/default/default.css' %} " rel="stylesheet" media="screen">     <!-- Slider Styles -->
+    <link href=" {% static 'css/colors/common_colors.css' %} " rel="stylesheet" media="screen">                   <!-- Template Color Scheme -->
+    <link href=" {% static 'css/colors/red.css' %} " rel="stylesheet" media="screen">                             <!-- Template Colors -->
+    <link href=" {% static 'css/responsive.css' %} " rel="stylesheet" media="screen">                             <!-- Responsive Fixes -->
+    
+    <!-- Modernizer and IE specyfic files -->  
+    <script src=" {% static 'js/modernizr.custom.js' %} "></script>
+     
+         
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    	<script src=" {% static 'js/html5shiv.js' %} "></script>
+	  	<script src=" {% static 'js/respond.min.js' %} "></script>
+    <![endif]-->
+    
+    
+    <!--[if IE 9]>
+    	<link href=" {% static 'css/ie.css' %} " rel="stylesheet" media="screen">
+    <![endif]--> 
+	
+	   
+  </head>
+  
+  <body id="subpage_blog">
+  
+    <!-- MOBILE NAVIGATION -->       
+    <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+        <h3>MENU</h3>
+        <div class="mobile_nav_close_button">
+        <a href="" class="button close close_v1" id="hideRight"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+        </div>
+      <!--  <div id="hideRight" class="button close hidden-lg hidden-md"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></div> -->
+        <nav id="mobile_menu_content">
+            <a href="{% url 'home' %}#about_intro">About</a>
+            <a href="{% url 'home' %}#services_intro">Services</a>
+            <a href="{% url 'post-list' %}">Blog</a>
+            <a href="{% url 'home' %}#contact">Contact</a>
+        </nav>
+    </div>
+        
+    
+    <!-- DESKTOP NAVIGATION -->      
+    <section id="nav_bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="logo" class="logo"><a href="/"><img src=" {% static 'images/logo.png' %} " alt="logo"></a></div>
+                    <nav id="navigation">
+                        <ul>
+                            <li class="visible-lg visible-md active"><a href="{% url 'home' %}#about_intro" id="desktop_about">About</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'home' %}#services_intro">Services</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'post-list' %}">Blog</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'home' %}#contact">Contact</a></li>
+
+                        </ul>
+						
+						<div class="mobile_nav_open_button">
+							<a href="" class="button mobile_nav_open hidden-lg hidden-md" id="showRight"><div data-icon="&#xe2f3;" class="button_icon nav_open"></div></a>
+						</div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>

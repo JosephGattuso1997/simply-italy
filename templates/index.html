@@ -1,0 +1,369 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+ 
+
+    <!-- ABOUT - INTRO -->    
+    <section id="about_intro">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2>About<br class="visible-lg visible-md visable-sm"> Me</h2>     
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
+                	<div class="content">
+	                	<h5>My name is John Breda and I have been travelling to Italy for over 30 years. </h5>
+						<p>I have been
+							offering travel advice to friends and relatives for years and planning their itineraries as well.
+							This something I thoroughly enjoy. I hope to do the same for you through this website. For the
+							first timers my most important recommendation is to not overdue your experience to see
+							everything; you will just be rushing from one place another place without having enough time
+							to enjoy each location. I hope that what I have in this website is useful to you in Planning your
+							Italian vacation whether it be your first or your 10 th . Over the years my wife and I have created
+							diaries for every time we have been to Italy. We have a wealth of travel experiences included
+							in those diaries that I am sharing here. I want to point out both the typical places to go and
+							some lesser travelled towns and cities. I have been to Italy so many times that I literally lost
+							count but every time I go there, I meticulously plan each trip to avoid any issues along the way.
+							If you do some detailed travel planning, it will make your trip that much more enjoyable. I will
+							also work with you to create your personalized Itinerary for your vacation on request.
+							Over the years we have also travelled to other Western and Eastern European countries and as
+							much as we have loved them, we always come back to this statement “It isn’t Italy”. Italy has
+							its own unique charm, excellent food, beautiful scenery and wonderful people. OK, this is not a
+							surprise to you but putting some work into your itinerary and doing some research, you can
+							make your vacation a truly magical experience instead a stress inducing trip. It has its quirks
+							and unique issues as well but somehow one thing that is always true is that I keep wanting to
+							go back. I hope to help you with some of those unique quirks so you can have that same warm
+							feeling for Italy after you have been there.
+							We love Italy so much that my wife and I got married in Florence in 1995 and have had our 10 th
+							and 20 th Wedding Anniversaries there with friends and family in a wonderful Palazzo. For that
+							reason, Florence holds a place in my heart and will always be my favorite Italian City.
+							Please look through these pages and see if there is anything that will help you plan your trip
+							and then go ahead make your plans and have a blast in my favorite vacation spot in the world.
+							If you need custom Itinerary Planning then let me know.</p>  
+					</div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- ABOUT - NUMBERS -->    
+    <section id="about_numbers" data-stellar-background-ratio="0.5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
+					<div data-icon="&#xe03a;" class="numbers_icon"></div>
+					<span class="counter">1500</span>
+					<h6>icons included</h6>     
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
+					<div data-icon="&#xe08e;" class="numbers_icon"></div>
+					<span class="counter">10000</span>
+					<h6>lines of code</h6>     
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
+					<div data-icon="&#xe1ab;" class="numbers_icon"></div>
+					<span class="counter">123</span>
+					<h6>hours of work</h6>     
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
+					<div data-icon="m" class="numbers_icon"></div>
+					<span class="counter">32</span>
+					<h6>cups of coffee</h6>     
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
+					<div data-icon="$" class="numbers_icon"></div>
+					<span class="counter">15</span>
+					<h6>revisions made</h6>     
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
+					<div data-icon="&#xe2d9;" class="numbers_icon"></div>
+					<span class="counter">13</span>
+					<h6>$ and it`s yours</h6>     
+                </div> 
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- TEAM -->     
+    <section id="team">
+        <div class="container">
+            <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 intro" >
+					<h3> My Favorite Cities</h3>
+					<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h5>
+                </div> 
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" >
+                	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br><br>Duis autuis nostrud exerci tationem vel eum.</p>
+				</div>
+            </div>
+            
+            <!-- MEMEBERS - GRID -->
+
+			<div class="row">
+            	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="members">
+            	<div class="item effect fill"><a href= {{ "about" }}><img src=" {% static 'images/italian-anterselva-lake-from-stalle-pass-italy-2021-04-03-14-35-55-utc.jpg' %} " alt="img01"><h6>Florence</h6></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-2"><img src=" {% static 'images/colosseum-in-rome-VMS5NPJ.jpg' %} " alt="img01"><h6>Rome</h6></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-3"><img src=" {% static 'images/venice-italy-2021-04-02-19-38-05-utc.jpg' %} "alt="img01"><h6>Venice</h6></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-4"><img src=" {% static 'images/lake.jpg' %} " alt="img01"><h6>Other</h6></a></div>
+            	</div>	
+            </div>       
+        </div>    
+    </section>
+    
+               <!-- ABOUT - INFO -->      
+    <section id="about_info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 info_box" >
+					<div data-icon="&#xe0f3;" class="about_icon"></div>
+					<h4>Lorem ipsum</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>     
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 info_box" >
+					<div data-icon="&#xe10c;" class="about_icon"></div>
+					<h4>Lorem ipsum</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>     
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 info_box" >
+					<div data-icon="&#xe10a;" class="about_icon"></div>
+					<h4>Lorem ipsum</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>     
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVICES - INTRO -->     
+    <section id="services_intro" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2>What<br class="visible-lg visible-md visable-sm"> We<br class="visible-lg visible-md visable-sm"> Do</h2>     
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
+                	<div class="content">
+	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.<br><br>Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre.</h5>  
+					</div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+            
+    <!-- SERVICES - GRID -->        
+    <section id="services" >
+        <div class="container-fluid">
+            <div class="row">
+            <div class="row service_boxes">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe005;" class="service_icon"></div>
+						  <h6>Travel Planning</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					  </div>   
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe1ce;" class="service_icon"></div>
+						  <h6>Itinerary</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh euismod.</p>
+					  </div>   
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe138;" class="service_icon"></div>
+						  <h6>Translation services</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam.</p>
+					  </div>   
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe1fe;" class="service_icon"></div>
+						  <h6>Guide</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh.</p>
+					  </div>   
+                </div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe005;" class="service_icon"></div>
+						  <h6>Travel Planning</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					  </div>   
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe1ce;" class="service_icon"></div>
+						  <h6>Itinerary</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh euismod.</p>
+					  </div>   
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe138;" class="service_icon"></div>
+						  <h6>Translation services</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam.</p>
+					  </div>   
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
+					  <div class="service_box_content">
+						  <div data-icon="&#xe1fe;" class="service_icon"></div>
+						  <h6>Guide</h6>
+						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh.</p>
+					  </div>   
+                </div>
+				
+            </div>
+        </div>
+    </section>
+    
+                <!-- BLOG - INTRO -->      
+    <section id="blog_intro" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2>Latest<br class="visible-lg visible-md visable-sm"> From<br class="visible-lg visible-md visable-sm"> The<br class="visible-lg visible-md visable-sm"> Blog</h2>     
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
+                	<div class="content">
+	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
+					</div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+    <!-- BLOG - POSTS -->        
+
+     <section id="blog_posts" >
+    	<!-- BLOG - POST 1 -->
+        {% for post in latest %}
+	    <div class="post_excerpt">
+	        <div class="container">
+			<a href="{{ post.get_absolute_url }}">
+	         	<div class="row">
+	         		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+	         			<img src="{{ post.thumbnail.url }}" alt="" class="img-responsive">
+	         		</div>
+				</div> 	
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
+						<h3>{{ post.title }}</h3>   
+						<p>{{ post.author }}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; {{ post.timestamp|timesince }} ago</p>
+						<p>{{ post.overview|linebreaks|truncatechars:200 }}</p>  
+	                </div>
+	            </div>
+	        </div>
+			</a>
+        </div>
+        {% endfor %}
+		        <!-- BLOG - LOAD MORE POSTS -->
+		<div class="more_posts">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<a href={{ "blog" }} class="cta_dark">Load more posts</a>   
+	                </div>
+	            </div>
+	        </div>
+        </div>  
+    </section>
+    
+         
+    <!-- PORTFOLIO - INTRO -->        
+    <section id="portfolio_intro" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2>Photo<br class="visible-lg visible-md visable-sm"> Gallary</h2>     
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
+                	<div class="content">
+	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
+					</div>    
+                </div>
+            </div>
+			<div class="row">
+            	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="members">
+            	<div class="item"><a href= {{ "about" }}><img src=" {% static 'images/italian-anterselva-lake-from-stalle-pass-italy-2021-04-03-14-35-55-utc.jpg' %} " alt="img01"><h6>Florence</h6></a></div>
+            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-1"><img src=" {% static 'images/colosseum-in-rome-VMS5NPJ.jpg' %} " alt="img01"><h6>Rome</h6></a></div>
+            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-3"><img src=" {% static 'images/venice-italy-2021-04-02-19-38-05-utc.jpg' %} "alt="img01"><h6>Venice</h6></a></div>
+            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-4"><img src=" {% static 'images/lake.jpg' %} " alt="img01"><h6>Other</h6></a></div>
+				<div class="item"><a href="#" class="md-trigger" data-modal="modal-3"><img src=" {% static 'images/venice-italy-2021-04-02-19-38-05-utc.jpg' %} "alt="img01"><h6>Venice</h6></a></div>
+            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-4"><img src=" {% static 'images/lake.jpg' %} " alt="img01"><h6>Other</h6></a></div>
+            	</div>	
+            </div>       
+        </div>
+		<div class="more_posts">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<a href={{ "gallary" }} class="cta_dark">Load more posts</a>   
+	                </div>
+	            </div>
+	        </div>
+        </div>  
+    </section>
+    
+       
+
+
+    
+            
+    <!-- CONTACT -->       
+    <section id="contact">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_big" >
+	                <div class="contact_content">
+						<h2>Contact</h2>
+						<!-- CONTACT FORM -->
+						<div id="contact_form">
+							<form action="php/contactform.php" id="contact-form" method="post">
+								<div class="input">
+		                        <h5>Your Name:</h5>
+		                        <input type="text" name="contact-name">
+		                        </div>
+		                        
+		                        <div class="input">
+		                        <h5>Your E-mail:</h5>
+		                        <input type="email" name="contact-email">
+		                        </div>
+		                        
+		                        <div class="input">
+		                        <h5>Message:</h5>
+		                        <textarea name="contact-message"></textarea>
+		                        </div>
+		                        
+		                        <button id="btn-send" class="cta_light" type="submit">Submit</button>
+		                    </form>
+		                    <div id="message"><div id="alert"></div></div> 
+	                    </div>    
+	                </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_content" >
+                	<div class="content">
+                		<!-- CONTACT INFO -->
+	                	<h5>Epsum factorial non deposit quid pro quo hic escorol.</h5>
+	                	<div data-icon="&#xe1b4;" class="contact_icon"></div>
+	                	<h5>Alexa Creative Agency</h5>
+	                	<p>121 King Street, Melbourne <br class="hidden-xs">Victoria 3000 Australia</p>
+	                	
+	                	<div data-icon="&#xe23a;" class="contact_icon"></div>
+	                	<h5>0012 123 456 789</h5>
+	                	
+	                	<div data-icon="&#xe242;" class="contact_icon"></div>
+	                	<h5><a href=" {% static 'mailto:contact@alexa.com' %} ">contact@alexa.com</a></h5>  
+					</div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock content %}

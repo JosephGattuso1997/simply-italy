@@ -1,0 +1,74 @@
+ {% load static %}
+  
+  <body class="homepage-slideshow">
+    
+    
+    <!-- PRELOADER -->  
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+				  <div class="rect1"></div>
+				  <div class="rect2"></div>
+				  <div class="rect3"></div>
+				  <div class="rect4"></div>
+				  <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+   
+      
+    <!-- MOBILE NAVIGATION -->      
+    <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+        <h3>MENU</h3> 
+        <div class="mobile_nav_close_button">
+        <a href="" class="button close close_v1" id="hideRight"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+        </div>
+        <nav id="mobile_menu_content">
+            <a href="#about_intro" >About</a>
+            <a href="#services_intro" >Services</a>
+            <a href="#blog_intro" >Blog</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+    </div>
+
+ 
+    <!-- HOME -->   
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" >
+                <img src=" {% static 'images/homepage_logo.png' %} " alt="logo" id="homepage_logo">
+	                <div id="homepage_content">
+			                <div id="homepage_content_slogan">
+				                <h1>Experice Italy<br>for Yourself!</h1>
+				                <h5>This website will show you how to visit Italy like a local!</h5>
+			                </div>
+		            </div>      
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- DESKTOP NAVIGATION -->   
+    <section id="nav_bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="logo" class="logo"><a href="#home"><img src=" {% static 'images/logo.png' %} " alt="logo"></a></div>
+                    <nav id="navigation">
+                        <ul>
+                            <li class="visible-lg visible-md active"><a href="#about_intro" id="desktop_about">About</a></li>
+                            <li class="visible-lg visible-md"><a href="#services_intro" >Services</a></li>
+                            <li class="visible-lg visible-md"><a href="#blog_intro" >Blog</a></li>
+                            <li class="visible-lg visible-md"><a href="#contact" >Contact</a></li>
+                        </ul>
+						
+						<div class="mobile_nav_open_button">
+							<a href="" class="button mobile_nav_open hidden-lg hidden-md" id="showRight"><div data-icon="&#xe2f3;" class="button_icon nav_open"></div></a>
+						</div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
