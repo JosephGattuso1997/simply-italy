@@ -31,3 +31,5 @@ typed-ast
 urllib3
 wrapt
 djangify
+boto
+django-storages
