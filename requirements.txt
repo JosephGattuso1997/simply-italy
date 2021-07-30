@@ -32,4 +32,5 @@ urllib3
 wrapt
 djangify
 boto
+boto3
 django-storages
