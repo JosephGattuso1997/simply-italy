@@ -21,7 +21,7 @@ class PostView(models.Model):
 
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile_picture = models.ImageField()
+    profile_picture = models.ImageField(upload_to= 'media')
 
     def __str__(self):
         return self.user.username
@@ -53,7 +53,7 @@ class Post(models.Model):
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    thumbnail = fields.ImageField(dependencies=[
+    thumbnail = fields.ImageField(upload_to= 'media', dependencies=[
         FileDependency(processor=ImageProcessor(
             format='JPEG', scale={'max_width': 1000, 'max_height': 1000}))
     ])
