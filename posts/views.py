@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import View, ListView, DetailView
 
 from .forms import CommentForm, PostForm, EmailSignupForm
-from .models import Post, Author, PostView, Signup
+from .models import Post, Author, PostView, Signup, Gallary, Favorite
 
 
 form = EmailSignupForm()
@@ -61,7 +61,9 @@ class IndexView(View):
     def get(self, request, *args, **kwargs):
         featured = Post.objects.filter(featured=True)
         latest = Post.objects.order_by('-timestamp')[0:3]
+        cities = Favorite.objects.all()
         context = {
+            'cities': cities,
             'object_list': featured,
             'latest': latest,
             'form': self.form
@@ -80,6 +82,7 @@ class IndexView(View):
 def index(request):
     featured = Post.objects.filter(featured=True)
     latest = Post.objects.order_by('-timestamp')[0:3]
+    cities = Favorite.objects.all()
 
     if request.method == "POST":
         email = request.POST["email"]
@@ -88,6 +91,7 @@ def index(request):
         new_signup.save()
 
     context = {
+        'cities': cities,
         'object_list': featured,
         'latest': latest,
         'form': form
@@ -95,12 +99,13 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-
 def gallary(request):
-
+    picture_list = Gallary.objects.all()
+    
     context = {
-
-    }
+        'picture_list': picture_list
+        
+        }
     return render(request, 'gallary.html', context)
 
 
@@ -217,3 +222,38 @@ def post_detail(request, id):
         'form': form
     }
     return render(request, 'single_post.html', context)
+
+
+def filter_by_category(request, category):
+    category_count = get_category_count()
+    most_recent = Post.objects.order_by('-timestamp')[:3]
+    post_list = Post.objects.filter(categories__title=category)
+    paginator = Paginator(post_list, 4)
+    page_request_var = 'page'
+    page = request.GET.get(page_request_var)
+    try:
+        paginated_queryset = paginator.page(page)
+    except PageNotAnInteger:
+        paginated_queryset = paginator.page(1)
+    except EmptyPage:
+        paginated_queryset = paginator.page(paginator.num_pages)
+    context = {
+        'post_list': post_list,
+        'queryset': paginated_queryset,
+        'most_recent': most_recent,
+        'page_request_var': page_request_var,
+        'category_count': category_count,
+        'form': form
+    }
+    return render(request, 'blog_category.html', context)
+
+
+
+class Fav(DetailView):
+    model = Favorite
+    template_name = 'portfolio_image.html'
+    context_object_name = 'fav'
+
+    def get_object(self):
+        obj = super().get_object()
+        return obj

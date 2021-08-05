@@ -73,7 +73,7 @@ class Post(models.Model):
         return reverse('post-detail', kwargs={
             'pk': self.pk
         })
-
+        
     def get_update_url(self):
         return reverse('post-update', kwargs={
             'pk': self.pk
@@ -103,3 +103,34 @@ class Signup(models.Model):
 
     def __str__(self):
         return self.email
+
+
+
+
+class Gallary(models.Model):
+    title = models.CharField(max_length=100)
+    thumbnail = fields.ImageField(upload_to= 'media', dependencies=[
+        FileDependency(processor=ImageProcessor(
+            format='JPEG', scale={'max_width': 1000, 'max_height': 1000}))
+    ])
+
+    def __str__(self):
+        return self.title
+
+
+
+class Favorite(models.Model):
+    title = models.CharField(max_length=100)
+    content = HTMLField()
+    thumbnail = fields.ImageField(upload_to= 'media', dependencies=[
+        FileDependency(processor=ImageProcessor(
+            format='JPEG', scale={'max_width': 1000, 'max_height': 1000}))
+    ])
+
+    def __str__(self):
+        return self.title
+
+    def get_city_url(self):
+        return reverse('about', kwargs={
+            'pk': self.pk
+        })

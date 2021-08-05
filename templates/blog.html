@@ -11,18 +11,30 @@
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
 					<h2>Latest<br class="visible-lg visible-md visable-sm"> From<br class="visible-lg visible-md visable-sm"> The<br class="visible-lg visible-md visable-sm"> Blog</h2>     
                 </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
-                	<div class="content">
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
-					</div>    
-                </div>
+					<aside class="col-lg-4">  
+
+		
+   	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" style = " display: flex;justify-content: center;align-items: center;">
+				
+					<ol class="list2">
+					<h3>Filter by Region</h3>
+	                	    {% for cat in category_count %}
+							<li><a href="{% url 'filter_by_category' category=cat.categories__title %}">{{ cat.categories__title }}</a><span>:  {{ cat.categories__title__count }} </span></li>
+							{% endfor %} 
+		            </ol> 
+                </div>	
+
+	</aside>
             </div>
         </div>
     </section>
+    <!-- BLOG - POSTS -->     
 
-   
-    <!-- BLOG - POSTS -->        
+
+
     <section id="blog_posts" >
+	
+	
     	<!-- BLOG - POST 1 -->
         {% for post in queryset %}
 	    <div class="post_excerpt">

@@ -2,85 +2,29 @@
 {% load static %}
 
 {% block content %}
-
+  
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
     <!-- Image Slider -->	    	
 	<section id="portfolio_single_work">
         <div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-wrapper theme-default" >
 	                <div id="slider">
-						<img src=" {% static 'images/portfolio/work1_big1.jpg' %} " alt="img01">
+						<img src="{{ fav.thumbnail.url }}" alt="img01">
 					</div>
                 </div>
 			</div>
 			
 			<div class="row portfolio_single_description">
 				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 portfolio_single_details" >   
-	                <h3>Florence</h3>
-	                <h5>The Obvious: </h5>
-	                <p>
+	                <h3>{{ fav.title }}</h3>
 
-
-Duomo and Baptistry
-A great structure.  A must see.  This is also a great landmark in negotiating your way around Florence.  If you want to see the original Baptistry doors head to the Museo del Duomo. 
-http://www.fodors.com/world/europe/italy/florence/things-to-do/sights/reviews/duomo-98505
-
-Piazza Signoria:
-The heart of Florence.  A great square with a great building (Palazzo Vecchio).  You will feel like you stepped back in time as much of this square has not changed for hundreds of years.  There is plaque marking the spot where Savonarola was burned at the steak.  Savonarola was famous for the “bonfire of the vanities” where he urged followers to throw sumptuous worldly possession in a bonfire on Piazza Santa Croce. .http://en.wikipedia.org/wiki/Girolamo_Savonarola
-Grab a coffe at Rivoire a cafe and chocolate shop on the square.  Sit back and watch time go by (what the hell you ARE on vacation). 
-http://www.rivoire.it/
-
-The David
-OK.  You were not even thinking about missing this right… Get your tickets in advance to see the big guy.  You can get tickets on this site  http://www.accademia.org/?gclid=CJXLhbHy_cUCFUyPHwod2rgANQ. 
-
-Uffizi Gallery
-Another absolutely do not miss!  Unbelievable collection of artworks from the Renaissance and other periods.  You will not forget a visit to this place.  Get an audio guide or take a tour to really enjoy the place.  I cannot stress enough - Get your tickets in advance.http://www.uffizi.org/?gclid=CN_swILz_cUCFQYRHwodA6oAtQ
-
-
-The not so obvious
-
-Mercato Centrale: 
-Get there and check out the place that Florentines shop at.  Great place to go early morning or afternoon to grab lunch and enjoy the fun.  Unbelievable choice of foods and drinks.  You will love this place - a great experience.  http://www.mercatocentrale.it/en/
-
-Santa Croce:
-Take a step back in time on this square.  You will notice many medieval buildings. Go inside this church and check our the who’s who of the renaissance.  The final resting place for Michelangelo.  Worth a visit.http://www.santacroceopera.it/en/
-
-Giardino di Boboli (Boboli Gardens):
-Take a nice walk up the hill over the Ponte Vecchio and bring a picnic lunch.  Enjoy the gardens and the view over the city.  A great break from the city.  I always go here once when I am there. https://www.polomuseale.firenze.it/en/musei/?m=boboli
-
-Piazzale Michelangelo:
-Another good walk up a hill that gives sweeping views of the city.  Worth visit. 
-
-
-Medici Chapel
-Not far from the David this place has two great statues by Michelangelo - Dawn and Dusk.  http://www.museumsinflorence.com/musei/Medici_chapels.html
-
-Eats
-
-In general you will get great food in Florence.  Make sure you try Ribbollita - a thick soup, Bistecca all Fiorentina - if you like rare meat (trust me it is good), wild boar - not gamey and Pasta with Procini mushrooms).
-
-Ristorante Natalino -  I always stop here for dinner but it is open for lunch as well.  Not in the guidebooks but has some very good food and is authentic.  It must be good - it has been around since 1880. Great sandwich shop as well for that trip to the Boboli Gardens. http://www.trattoriaangiolino.it/
-
-Buca Lapi - A great place for the famous Bistecca all Fiorentina from Chiannina beef unique to Tuscany.  Expensive but worth it.   Please be advised that they cook it rare and do not tell them you want it otherwise as they may stab you in the heart!  Try it you’ll like it. 
-
-Il Latini - For a cheap and interesting lunch you cannot beat this place.  You site at communal tables and meet some interesting folks.  Both Florentines and Tourists eat here.  Give it a try the food is simple and good. . http://www.illatini.com/en/
-
-
-La Giostra - The place was started by a prince and now run by his twin sons.  The food is good and a little fancy but not ridiculously priced. 
-
-Cinghiale Bianco - Means White Boar.  In the Oltrarno side of Florence on the other side of the Arno from the Duomo.  It serves real Florentine food in a simple but great environment.  Get the Cinghiale with Polenta (Wild Boar with Polenta) - what else.  If you want a romantic spot call at least a day or two in advance and ask for the table upstairs.  You will have your own private table and the servers will climb up to bring you your supper. http://www.cinghialebianco.com/en_index.php
-
-Trattoria Pallotino - Good place to stop for lunch. Very simple mom and pop place (my favorite kind).  Serves traditional florentine food including Ribbolita and Wild board over fresh pasta.  http://www.trattoriapallottino.com/
-</p>	
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 portfolio_single_done" >
-		            <ul class="list1">
-		            	<li>Web design</li>
-		            	<li>Web development</li>
-		            	<li>Marketing Campain</li>
-		            	<li>Print Design</li>	
-		            </ul> 
-		            <a href="#" class="cta_dark">Open Live website</a>   					
+	                <p>{{ fav.content | safe }}</p>	
                 </div>
 			</div>
 		</div>

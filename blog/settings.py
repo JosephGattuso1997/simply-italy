@@ -146,6 +146,8 @@ AWS_STORAGE_BUCKET_NAME = "simply-italy-travel-media"
 AWS_QUERYSTRING_AUTH = False
 # Tinymce
 
+# Tinymce
+
 TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 20,
