@@ -140,8 +140,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = "AKIAXSBNM34EISDVGZE4"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = "simply-italy-travel-media"
 AWS_QUERYSTRING_AUTH = False
 

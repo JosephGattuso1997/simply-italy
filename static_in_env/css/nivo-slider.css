@@ -51,19 +51,19 @@
 }
 /* The slices and boxes in the Slider */
 .nivo-slice {
-	display:block;
+	display:none;
 	position:absolute;
 	z-index:5;
 	height:100%;
 	top:0;
 }
 .nivo-box {
-	display:block;
+	display:none;
 	position:absolute;
 	z-index:5;
 	overflow:hidden;
 }
-.nivo-box img { display:block; }
+.nivo-box img { display:none; }
 
 /* Caption styles */
 .nivo-caption {
