@@ -62,11 +62,13 @@ class IndexView(View):
         featured = Post.objects.filter(featured=True)
         latest = Post.objects.order_by('-timestamp')[0:3]
         cities = Favorite.objects.all()
+        pics = Gallary.objects.all()[0:5]
         context = {
             'cities': cities,
             'object_list': featured,
             'latest': latest,
-            'form': self.form
+            'form': self.form,
+            'pics': pics
         }
         return render(request, 'index.html', context)
 
@@ -82,6 +84,7 @@ class IndexView(View):
 def index(request):
     featured = Post.objects.filter(featured=True)
     latest = Post.objects.order_by('-timestamp')[0:3]
+    pics = Gallary.objects[0:5]
     cities = Favorite.objects.all()
 
     if request.method == "POST":
@@ -94,7 +97,8 @@ def index(request):
         'cities': cities,
         'object_list': featured,
         'latest': latest,
-        'form': form
+        'form': form,
+        'pics': pics
     }
     return render(request, 'index.html', context)
 
@@ -116,6 +120,14 @@ def about(request):
     }
     return render(request, 'portfolio_image.html', context)
 
+
+
+def Map(request):
+
+    context = {
+
+    }
+    return render(request, 'map.html', context)
 
 
 
@@ -238,6 +250,7 @@ def filter_by_category(request, category):
     except EmptyPage:
         paginated_queryset = paginator.page(paginator.num_pages)
     context = {
+        'category': category,
         'post_list': post_list,
         'queryset': paginated_queryset,
         'most_recent': most_recent,

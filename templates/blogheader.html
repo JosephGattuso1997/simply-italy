@@ -35,6 +35,9 @@
     <link href=" {% static 'css/rapid-icons.css' %} " rel="stylesheet" media="screen">                            <!-- Custom icons CSS file -->
     <link href=" {% static 'css/animate.css' %} " rel="stylesheet" media="screen">                                <!-- CSS animations -->
     <link href=" {% static 'css/custom_animations.css' %} " rel="stylesheet" media="screen">                      <!-- Custom CSS animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+     
+     
                                                                                                                 <!-- Owl Carousel Styles - Portfolio Section -->
     <link href=" {% static 'css/nivo-lightbox.css' %} " rel="stylesheet" media="screen">                          <!-- Lightbox Styles -->
     <link href=" {% static 'css/nivo_lightbox_themes/default/default.css' %} " rel="stylesheet" media="screen">   <!-- Lightbox Styles -->
@@ -45,6 +48,8 @@
     <link href=" {% static 'css/responsive.css' %} " rel="stylesheet" media="screen">                             <!-- Responsive Fixes -->
     
     <!-- Modernizer and IE specyfic files -->  
+
+
     <script src=" {% static 'js/modernizr.custom.js' %} "></script>
      
          
@@ -73,15 +78,17 @@
       <!--  <div id="hideRight" class="button close hidden-lg hidden-md"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></div> -->
         <nav id="mobile_menu_content">
             <a href="{% url 'home' %}#about_intro">About</a>
+            <a href="{% url 'home' %}#team">Favorites</a>
             <a href="{% url 'home' %}#services_intro">Services</a>
             <a href="{% url 'post-list' %}">Blog</a>
+            <a href="{% url 'home' %}#portfolio_intro">Gallery</a>
             <a href="{% url 'home' %}#contact">Contact</a>
         </nav>
     </div>
         
     
     <!-- DESKTOP NAVIGATION -->      
-    <section id="nav_bar">
+    <section id="nav_bar" style = "background: rgba(139, 149, 160, 1)">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -89,8 +96,10 @@
                     <nav id="navigation">
                         <ul>
                             <li class="visible-lg visible-md active"><a href="{% url 'home' %}#about_intro" id="desktop_about">About</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'home' %}#team">Favorites</a></li>
                             <li class="visible-lg visible-md"><a href="{% url 'home' %}#services_intro">Services</a></li>
                             <li class="visible-lg visible-md"><a href="{% url 'post-list' %}">Blog</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'home' %}#portfolio_intro">Gallery</a></li>
                             <li class="visible-lg visible-md"><a href="{% url 'home' %}#contact">Contact</a></li>
 
                         </ul>

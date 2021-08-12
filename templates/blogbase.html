@@ -2,9 +2,10 @@
 <html>
 
 {% include 'blogheader.html' %}
-
-
+<body style = "background: rgba(139, 149, 160, .3)">
+    
     {% block content %}
+{% include 'map.html' %}
     {% endblock content %}
 
     {% include 'blogfooter.html' %}

@@ -46,17 +46,17 @@ Please look through these pages and see if there is anything that will help you 
             <div class="row">
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
 					<div data-icon="&#xe03a;" class="numbers_icon"></div>
-					<span class="counter">1500</span>
-					<h6>icons included</h6>     
+					<span class="counter">93</span>
+					<h6>Cities Visited</h6>     
                 </div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
 					<div data-icon="&#xe08e;" class="numbers_icon"></div>
-					<span class="counter">10000</span>
-					<h6>lines of code</h6>     
+					<span class="counter">30</span>
+					<h6>Years of Experience</h6>     
                 </div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
 					<div data-icon="&#xe1ab;" class="numbers_icon"></div>
-					<span class="counter">123</span>
+					<span class="counter"></span>
 					<h6>hours of work</h6>     
                 </div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
@@ -85,10 +85,18 @@ Please look through these pages and see if there is anything that will help you 
             <div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 intro" >
 					<h3> My Favorite Cities</h3>
-					<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h5>
+					<h5>There are many wonderful places to visit in Italy.  I have been to about 60 towns and cities, and there are very few that I would say “don’t go there”.  They all have their special charm and cuisine. These are some of my favorites.</h5>
                 </div> 
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" >
-                	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br><br>Duis autuis nostrud exerci tationem vel eum.</p>
+                	<p>
+
+
+In this section I have the big three of Florence, Venice and Rome.  They are not here because they are popular; they are here because I love these cities.  I have also added a few of my favorite smaller cities - Positano, Tropea and Matera.  Positano is very popular but worth a visit - by all means stay overnight.  Tropea and Matera were off the radar when I first visited, but now are starting to show up in more and more articles.  Get a trip into these two smaller towns now before they are discovered by everyone. 
+
+Of course Venice, Florence and Rome can be covered with a very simple itinerary travelling by train only.  For Positano, Matera and Tropea, you will need a car to travel there.  These smaller towns can be combined in an itinerary that also includes Puglia.  Don’t try to see them all on one trip unless you have ample time.  A recurring theme here is do not make a rushed itinerary trying to see all the sites.  You will not have enough time to just Simply Italy Travel.
+
+Have a wonderful time.  Buona Vacanza!
+</p>
 				</div>
             </div>
             
@@ -243,20 +251,18 @@ Please look through these pages and see if there is anything that will help you 
                 </div>
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
                 	<div class="content">
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
+	                	<h5>Enjoy this collection of photos form my travels over the years!</h5>  
 					</div>    
                 </div>
             </div>
 			<div class="row">
-            	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="members">
-            	<div class="item"><a href= {{ "about" }}><img src=" {% static 'images/italian-anterselva-lake-from-stalle-pass-italy-2021-04-03-14-35-55-utc.jpg' %} " alt="img01"><h6>Florence</h6></a></div>
-            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-1"><img src=" {% static 'images/colosseum-in-rome-VMS5NPJ.jpg' %} " alt="img01"><h6>Rome</h6></a></div>
-            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-3"><img src=" {% static 'images/venice-italy-2021-04-02-19-38-05-utc.jpg' %} "alt="img01"><h6>Venice</h6></a></div>
-            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-4"><img src=" {% static 'images/lake.jpg' %} " alt="img01"><h6>Other</h6></a></div>
-				<div class="item"><a href="#" class="md-trigger" data-modal="modal-3"><img src=" {% static 'images/venice-italy-2021-04-02-19-38-05-utc.jpg' %} "alt="img01"><h6>Venice</h6></a></div>
-            	<div class="item"><a href="#" class="md-trigger" data-modal="modal-4"><img src=" {% static 'images/lake.jpg' %} " alt="img01"><h6>Other</h6></a></div>
-            	</div>	
-            </div>       
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-wrapper theme-default">
+	                <div id="slider" class="nivoSlider">
+					{% for p in pics %}
+						<img src="{{ p.thumbnail.url }}" alt="img01" data-pagespeed-url-hash="2374646602" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+					{% endfor %}
+                </div>
+    		</div> 
         </div>
 		<div class="more_posts">
 	        <div class="container">
@@ -267,13 +273,10 @@ Please look through these pages and see if there is anything that will help you 
 	            </div>
 	        </div>
         </div>  
-    </section>
-    
-       
+    </section>    
 
 
-    
-            
+
     <!-- CONTACT -->       
     <section id="contact">
         <div class="container-fluid">
@@ -308,16 +311,16 @@ Please look through these pages and see if there is anything that will help you 
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_content" >
                 	<div class="content">
                 		<!-- CONTACT INFO -->
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol.</h5>
+	                	<h5>Please Contact Me For More Information</h5>
 	                	<div data-icon="&#xe1b4;" class="contact_icon"></div>
-	                	<h5>Alexa Creative Agency</h5>
+	                	<h5>Simply Italy Travel</h5>
 	                	<p>121 King Street, Melbourne <br class="hidden-xs">Victoria 3000 Australia</p>
 	                	
 	                	<div data-icon="&#xe23a;" class="contact_icon"></div>
 	                	<h5>0012 123 456 789</h5>
 	                	
 	                	<div data-icon="&#xe242;" class="contact_icon"></div>
-	                	<h5><a href=" {% static 'mailto:contact@alexa.com' %} ">contact@alexa.com</a></h5>  
+	                	<h5><a href=" {% static 'mailto:contact@alexa.com' %} ">info@simplyitalytravel.com</a></h5>  
 					</div>    
                 </div>
             </div>

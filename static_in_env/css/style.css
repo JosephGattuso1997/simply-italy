@@ -43,7 +43,15 @@ Last change:	09/10/2014
 -------------------->>> GLOBAL STYLES <<<---------------------------
 -------------------------------------------------------------------*/
 
-
+path:hover{
+	fill: #fff;
+  }
+  path.selected{
+	fill: #fff!important;
+  }
+  .regione{
+	transition: all 200ms ease-in-out;
+  }
 
 /*--------------------------------------*/
 /* 1. RESET ----------------------------*/
@@ -1163,7 +1171,7 @@ ol.list3 li:before {
 
 #navigation li a{
 	-webkit-font-smoothing: antialiased;
-    color:black;
+    color:white;
     font-size: 0.8rem;
     font-family: 'familiar_probold', sans-serif;
 }
@@ -2015,8 +2023,7 @@ input:focus, textarea:focus {outline:none;}
 }
 
 .portfolio_single_details {
-	padding-right: 4rem;
-    border-right: solid 1px;    
+  
 }
 
 

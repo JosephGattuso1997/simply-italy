@@ -10,34 +10,29 @@ img {
 }
 </style>
     <!-- Image Slider -->	    	
-	<section id="portfolio_single_work">
-        <div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-wrapper theme-default" >
-	                <div id="slider">
-						<img src="{{ fav.thumbnail.url }}" alt="img01">
-					</div>
-                </div>
-			</div>
-			
-			<div class="row portfolio_single_description">
-				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 portfolio_single_details " >   
-	                <h3>{{ fav.title }}</h3>
+	    <section id="blog_posts" >
+    	<!-- BLOG - POST 1 -->
+	    <div class="post_excerpt"style = "pointer-events: none;">
+	        <div class="container">
+	         	<div class="row">
+	         		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+	         			<img src="{{ fav.thumbnail.url }}" alt="" class="img-responsive">
+	         		</div>
+				</div> 	
+	        
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
+						<h3>{{ fav.title }}</h3>   
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                        {{ fav.content | safe }}
+	                </div>
+	            </div>
+	        </div>
+        </div>
+    </section>
 
-	                <p>{{ fav.content | safe }}</p>	
-                </div>
-			</div>
-		</div>
-	</section>
-
-    <script>
-		$( document ).ready(function()  {
-	        $('#slider').nivoSlider({
-		        effect: 'random',
-		        directionNav: false,
-		        controlNav: false,
-		        pauseTime: 3000000,  
-	        });
-        });
-    </script>
 {% endblock content %}

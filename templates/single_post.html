@@ -13,7 +13,7 @@ img {
     <!-- BLOG - POSTS -->        
     <section id="blog_posts" >
     	<!-- BLOG - POST 1 -->
-	    <div class="post_excerpt">
+	    <div class="post_excerpt"style = "pointer-events: none;">
 	        <div class="container">
 	         	<div class="row">
 	         		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
@@ -67,6 +67,7 @@ img {
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_big" >
 	                <div class="contact_content col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+					{% if request.user.is_authenticated %}
 						<h3>Leave your comment:</h3>
 						<!-- CONTACT FORM -->
 						<div id="contact_form">
@@ -81,6 +82,9 @@ img {
 		                    </form>
 	                    </div>    
 	                </div>
+				{% else %}
+                <a href="{% url 'account_login' %}" class="cta_light">Login to comment</a>
+                {% endif %}
                 </div>
             </div>
         </div>
