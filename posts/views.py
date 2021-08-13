@@ -127,7 +127,7 @@ def Map(request):
     context = {
 
     }
-    return render(request, 'map.html', context)
+    return render(request, 'elements.html', context)
 
 
 
