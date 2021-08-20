@@ -1978,7 +1978,7 @@ input:focus, textarea:focus {outline:none;}
 
 #footer {
 	padding: 4.125rem;
-	background: url(../images/footer_bg.jpg) repeat center center scroll;
+	background:rgba(139, 149, 160, 1);
 }
 
 .footer_content {

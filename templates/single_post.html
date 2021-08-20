@@ -15,10 +15,10 @@
     	<!-- BLOG - POST 1 -->
 	    <div class="post_excerpt"style = "pointer-events: none;">
 	        <div class="container">
-			<center>
+
 	         	<div class="row">
 	         		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-					 <center>
+
 	         			<img src="{{ post.thumbnail.url }}" alt="" class="img-responsive">
 						 </center>
 	         		</div>
@@ -27,7 +27,7 @@
 	            <div class="row">
 	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<h3>{{ post.title }}</h3>   
-						<p>{{ post.author.user.username }}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{% for cat in post.categories.all %}<a href="#">{{ cat }}</a>{% endfor %}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{{ post.timestamp|timesince }} ago</p>
+						<p>{{ post.author.user.username }}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{% for cat in post.categories.all %}<a href="{% url 'filter_by_category' category=cat %}">{{ cat }}</a>{% endfor %}&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;{{ post.timestamp|timesince }} ago</p>
 	                </div>
 	            </div>
 	            
