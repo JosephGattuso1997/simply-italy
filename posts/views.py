@@ -3,10 +3,10 @@ from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import View, ListView, DetailView
-
-from .forms import CommentForm, PostForm, EmailSignupForm
+from django.core.mail import send_mail
+from .forms import CommentForm, Subscribe, EmailSignupForm
 from .models import Post, Author, PostView, Signup, Gallary, Favorite
-
+from django.http import HttpResponseRedirect
 
 form = EmailSignupForm()
 
@@ -56,7 +56,7 @@ def get_category_count():
 
 
 class IndexView(View):
-    form = EmailSignupForm()
+    form = Subscribe()
 
     def get(self, request, *args, **kwargs):
         featured = Post.objects.filter(featured=True)
@@ -73,13 +73,11 @@ class IndexView(View):
         return render(request, 'index.html', context)
 
     def post(self, request, *args, **kwargs):
-        email = request.POST.get("email")
-        new_signup = Signup()
-        new_signup.email = email
-        new_signup.save()
-        messages.info(request, "Successfully subscribed")
-        return redirect("home")
-
+        contact = request.POST.get("email")
+        subject = request.POST.get("name")
+        message = request.POST.get('message')
+        send_mail(contact, message, 'info@simplyitalytravel.com', ['info@simplyitalytravel.com'], fail_silently = False)
+        return redirect('https://www.simplyitalytravel.com/')
 
 def index(request):
     featured = Post.objects.filter(featured=True)
@@ -122,12 +120,12 @@ def about(request):
 
 
 
-def Map(request):
+def Gear(request):
 
     context = {
 
     }
-    return render(request, 'map.html', context)
+    return render(request, 'essentials.html', context)
 
 
 

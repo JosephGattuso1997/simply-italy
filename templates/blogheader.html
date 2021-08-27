@@ -53,16 +53,7 @@
     <script src=" {% static 'js/modernizr.custom.js' %} "></script>
      
          
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    	<script src=" {% static 'js/html5shiv.js' %} "></script>
-	  	<script src=" {% static 'js/respond.min.js' %} "></script>
-    <![endif]-->
-    
-    
-    <!--[if IE 9]>
-    	<link href=" {% static 'css/ie.css' %} " rel="stylesheet" media="screen">
-    <![endif]--> 
+
 	
 	   
   </head>
@@ -80,7 +71,8 @@
             <a href="{% url 'home' %}#about_intro">About</a>
             <a href="{% url 'home' %}#services_intro">Services</a>
             <a href="{% url 'post-list' %}">Blog</a>
-            <a href="{% url 'home' %}#portfolio_intro">Gallery</a>
+            <a href="{% url 'gallary' %}">Gallery</a>
+            <a href="{% url 'Gear' %}">Gear</a>
             <a href="{% url 'home' %}#contact">Contact</a>
         </nav>
     </div>
@@ -93,10 +85,11 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <nav id="navigation">
                         <ul>
-                            <li class="visible-lg visible-md active"><a href="{% url 'home' %}#about_intro" id="desktop_about">About</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'home' %}#about_intro" id="desktop_about">About</a></li>
                             <li class="visible-lg visible-md"><a href="{% url 'home' %}#services_intro">Services</a></li>
                             <li class="visible-lg visible-md"><a href="{% url 'post-list' %}">Blog</a></li>
-                            <li class="visible-lg visible-md"><a href="{% url 'home' %}#portfolio_intro">Gallery</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'gallary' %}">Gallery</a></li>
+                            <li class="visible-lg visible-md"><a href="{% url 'Gear' %}">Gear</a></li>
                             <li class="visible-lg visible-md"><a href="{% url 'home' %}#contact">Contact</a></li>
 
                         </ul>

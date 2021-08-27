@@ -43,3 +43,12 @@ class EmailSignupForm(forms.ModelForm):
     class Meta:
         model = Signup
         fields = ('email', )
+
+class Subscribe(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)
+    
+
+    def __str__(self):
+        return self.Email

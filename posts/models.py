@@ -4,10 +4,6 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 
-from smartfields import fields
-from smartfields.dependencies import FileDependency
-from smartfields.processors import ImageProcessor
-
 User = get_user_model()
 
 
@@ -53,10 +49,7 @@ class Post(models.Model):
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    thumbnail = fields.ImageField(upload_to= 'media', dependencies=[
-        FileDependency(processor=ImageProcessor(
-            format='JPEG', scale={'max_width': 1000, 'max_height': 1000}))
-    ])
+    thumbnail = models.ImageField()
 
 
     categories = models.ManyToManyField(Category)
@@ -109,10 +102,7 @@ class Signup(models.Model):
 
 class Gallary(models.Model):
     title = models.CharField(max_length=100)
-    thumbnail = fields.ImageField(upload_to= 'media', dependencies=[
-        FileDependency(processor=ImageProcessor(
-            format='JPEG', scale={'max_width': 1000, 'max_height': 1000}))
-    ])
+    thumbnail = models.ImageField()
 
     def __str__(self):
         return self.title
@@ -122,10 +112,7 @@ class Gallary(models.Model):
 class Favorite(models.Model):
     title = models.CharField(max_length=100)
     content = HTMLField()
-    thumbnail = fields.ImageField(upload_to= 'media', dependencies=[
-        FileDependency(processor=ImageProcessor(
-            format='JPEG', scale={'max_width': 1000, 'max_height': 1000}))
-    ])
+    thumbnail = models.ImageField()
 
     def __str__(self):
         return self.title

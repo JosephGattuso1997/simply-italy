@@ -1,7 +1,6 @@
 import os
 import django_heroku
 
-
 LOGIN_REDIRECT_URL = 'post-list'
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k*b$$!%hiswnhp2pad)6(u4x_g)r5w%@&zlv&@2hrz4#f3+#57'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -37,7 +36,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'tinymce',
 
-    'smartfields',
     'storages',
     'posts'
 ]
@@ -46,6 +44,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -89,11 +88,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'blogdb',
-            'USER': 'blog_admin',
-            'PASSWORD': 'testing123',
-            'HOST': 'localhost',
-            'PORT': '',
+            'NAME': 'df8h9dejf40c81',
+            'USER': 'xxifmuofxnjcqe',
+            'PASSWORD': '6176c632d321e166f83d9a94fd2fa41b731d3596b7537f87cc80f282371363f7',
+            'HOST': 'ec2-52-0-67-144.compute-1.amazonaws.com',
+            'PORT': '5432',
         }
     }
 
@@ -141,9 +140,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_ACCESS_KEY_ID = "AKIAXSBNM34EMFTBWMZW"
+AWS_SECRET_ACCESS_KEY = "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"
+
 
 
 AWS_STORAGE_BUCKET_NAME = "simply-italy-travel-media"
@@ -183,6 +185,12 @@ MAILCHIMP_DATA_CENTER = ''
 MAILCHIMP_EMAIL_LIST_ID = ''
 
 # Django Allauth
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'info@simplyitalytravel.com'
+EMAIL_HOST_PASSWORD = 'SimplyItalyTravel2021'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

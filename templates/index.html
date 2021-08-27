@@ -211,7 +211,7 @@ Have a wonderful time.  Buona Vacanza!
 	<br><br>			
 <svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="500.512px" height="500.114px" viewBox="0 0 560.512 663.114" enable-background="new 0 0 560.512 663.114"
+	 x="0px" y="0px" width="400.512px" height="400.114px" viewBox="0 0 560.512 663.114" enable-background="new 0 0 560.512 663.114"
 	 xml:space="preserve">
 <defs>
 </defs>
@@ -888,7 +888,7 @@ Have a wonderful time.  Buona Vacanza!
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-wrapper theme-default" style='padding-top:100px;'>
 	                <div id="slider" class="nivoSlider">
 					{% for p in pics %}
-						<img src="{{ p.thumbnail.url }}" class="img-fluid" alt="img01" data-pagespeed-url-hash="2374646602" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+						<img src="{{ p.thumbnail.url }}" class="img-fluid">
 					{% endfor %}
                 </div>
     		</div> 
@@ -904,7 +904,61 @@ Have a wonderful time.  Buona Vacanza!
         </div>  
     </section>    
 
+    <!-- ABOUT - INTRO -->    
+    <section id="gear">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2>Essentials</h2>     
+                </div>
+				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
+                	<div class="content">
+	                	<h3>These are some hrlpful tips and gear needed for your Italy trip. </h3>
+					</div> </div>
+                	<div class="content" style="padding:75px;">
+						            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<h3>Italy Travel Essentials</h3>   
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top:75px;">
+                        <p>There are some essentials for Italy Travel.  Listed below is some information that I hope you will find useful. 
 
+For the first timers my most important recommendation is to not overdo your experience to see everything; you will just be rushing from one place to another place without having enough time to enjoy each location. I hope that what I have on this website is useful to you in Planning your Italian vacation whether it be your first or your 10th.  
+
+Please look through these pages and see if there is anything that will help you plan your trip and then go ahead make your plans and have a blast in my favorite vacation spot in the world. If you need custom Itinerary Planning then please contact me. 
+</p>
+
+	                </div>
+	            </div>
+
+
+                <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"style="padding-top:75px;padding-bottom:75px;">
+						<h3>When to Go</h3>   
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p>I think the best time to go is Spring and Fall.  Specifically in May/June and September/October.  The weather is typically pleasant, it is less crowded, and the prices can be lower. Off season offers colder weather but if you like to avoid the crowds then this is the time for you. Try to stay away in July and particularly August.  They can both get very hot and August has the added disadvantage of all of the country going on vacation which means some restaurants and shops are closed. Here are some weather averages for the big three cities: 
+
+</p>
+
+	                </div>
+	            </div>
+				<div class="more_posts">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<a href="{% url 'Gear' %}" class="cta_dark">Gear and Dates</a>   
+	                </div>
+	            </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CONTACT -->       
     <section id="contact">
@@ -915,20 +969,21 @@ Have a wonderful time.  Buona Vacanza!
 						<h2>Contact</h2>
 						<!-- CONTACT FORM -->
 						<div id="contact_form">
-							<form action="php/contactform.php" id="contact-form" method="post">
+							<form method="POST" action=".">
+							{% csrf_token %}
 								<div class="input">
 		                        <h5>Your Name:</h5>
-		                        <input type="text" name="contact-name">
+		                        <input type="text" name="name">
 		                        </div>
 		                        
 		                        <div class="input">
 		                        <h5>Your E-mail:</h5>
-		                        <input type="email" name="contact-email">
+		                        <input type="email" name="email">
 		                        </div>
 		                        
 		                        <div class="input">
 		                        <h5>Message:</h5>
-		                        <textarea name="contact-message"></textarea>
+		                        <textarea name="message"></textarea>
 		                        </div>
 		                        
 		                        <button id="btn-send" class="cta_light" type="submit">Submit</button>
@@ -943,7 +998,7 @@ Have a wonderful time.  Buona Vacanza!
 	                	<h5>Please Contact Me For More Information</h5>
 	                	
 	                	<div data-icon="&#xe242;" class="contact_icon"></div>
-	                	<h5><a href=" {% static 'mailto:info@simplyitalytravel.com' %} ">info@simplyitalytravel.com</a></h5>  
+	                	<h5>info@simplyitalytravel.com</h5>  
 					</div>    
                 </div>
             </div>
