@@ -101,7 +101,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def gallary(request):
+def gallery(request):
     picture_list = Gallary.objects.all()
     
     context = {
