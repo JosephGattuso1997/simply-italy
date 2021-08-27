@@ -49,7 +49,7 @@ class Post(models.Model):
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    thumbnail = models.ImageField()
+    thumbnail = models.ImageField(upload_to='Blog/')
 
 
     categories = models.ManyToManyField(Category)
@@ -102,7 +102,7 @@ class Signup(models.Model):
 
 class Gallary(models.Model):
     title = models.CharField(max_length=100)
-    thumbnail = models.ImageField()
+    thumbnail = models.ImageField(upload_to='Gallery/')
 
     def __str__(self):
         return self.title
@@ -112,7 +112,7 @@ class Gallary(models.Model):
 class Favorite(models.Model):
     title = models.CharField(max_length=100)
     content = HTMLField()
-    thumbnail = models.ImageField()
+    thumbnail = models.ImageField(upload_to='Favorite/')
 
     def __str__(self):
         return self.title
