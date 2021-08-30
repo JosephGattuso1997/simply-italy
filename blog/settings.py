@@ -143,8 +143,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID = "AKIA45DYFA6QOQZW4LVM"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
 
 
 
