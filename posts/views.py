@@ -111,12 +111,12 @@ def gallery(request):
     return render(request, 'gallary.html', context)
 
 
-def about(request):
+def icons(request):
 
     context = {
 
     }
-    return render(request, 'portfolio_image.html', context)
+    return render(request, 'elements.html', context)
 
 
 
