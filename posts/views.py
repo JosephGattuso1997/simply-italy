@@ -62,7 +62,7 @@ class IndexView(View):
         featured = Post.objects.filter(featured=True)
         latest = Post.objects.order_by('-timestamp')[0:3]
         cities = Favorite.objects.all()
-        pics = Gallary.objects.all()[0:5]
+        pics = Gallary.objects.order_by('-timestamp')[0:5]
         context = {
             'cities': cities,
             'object_list': featured,
