@@ -102,7 +102,7 @@ def index(request):
 
 
 def gallery(request):
-    picture_list = Gallary.objects.all()
+    picture_list = Gallary.objects.all().order_by('-timestamp')
     
     context = {
         'picture_list': picture_list
@@ -134,11 +134,11 @@ class PostListView(ListView):
     model = Post
     template_name = 'blog.html'
     context_object_name = 'queryset'
-    paginate_by = 2
+    paginate_by = 5
 
     def get_context_data(self, **kwargs):
         category_count = get_category_count()
-        most_recent = Post.objects.order_by('-timestamp')[:3]
+        most_recent = Post.objects.order_by('-timestamp')
         context = super().get_context_data(**kwargs)
         context['most_recent'] = most_recent
         context['page_request_var'] = "page"
