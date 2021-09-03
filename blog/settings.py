@@ -17,7 +17,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -152,6 +151,7 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 
 
+
 AWS_STORAGE_BUCKET_NAME = "simply-italy-travel-media-prod"
 AWS_QUERYSTRING_AUTH = False
 
@@ -201,6 +201,6 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend'
 )
 
-SITE_ID = 1
+SITE_ID = 2
 
 django_heroku.settings(locals())

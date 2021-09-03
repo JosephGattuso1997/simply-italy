@@ -102,7 +102,7 @@ def index(request):
 
 
 def gallery(request):
-    picture_list = Gallary.objects.all().order_by('-timestamp')
+    picture_list = Gallary.objects.order_by('-timestamp')
     
     context = {
         'picture_list': picture_list
