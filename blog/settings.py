@@ -89,7 +89,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'df8h9dejf40c81',
             'USER': 'xxifmuofxnjcqe',
-            'PASSWORD': '6176c632d321e166f83d9a94fd2fa41b731d3596b7537f87cc80f282371363f7',
+            'PASSWORD': os.environ.get('db'),
             'HOST': 'ec2-52-0-67-144.compute-1.amazonaws.com',
             'PORT': '5432',
         }
